@@ -185,9 +185,8 @@ from rest_framework.pagination import PageNumberPagination
 class Booksviewset(ModelViewSet):
     queryset = Book.objects.all()
     serializer_class = BookSerializer
-    filter_backends = [DjangoFilterBackend]
-    # filterset_class = BooksFilter
-    filterset_fields = ['category', 'published_date','available','title']
+    filter_backends = [DjangoFilterBackend, SearchFilter, OrderingFilter]
+    filterset_class = BooksFilter  # استخدم الفلتر المخصص
     search_fields = ['title']
     ordering_fields = ['published_date']
     pagination_class = PageNumberPagination
