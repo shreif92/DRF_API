@@ -16,7 +16,7 @@ This project is a Django-based API built using Django Rest Framework (DRF). It p
 1. Clone the repository:
 
    ```bash
-   git clone <repository-url>
+   git clone https://github.com/shreif92/DRF_API.git
    ```
 
 2. Navigate to the project directory:
